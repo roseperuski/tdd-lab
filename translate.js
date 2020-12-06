@@ -16,7 +16,7 @@ function convertToPigLatin(word){
   } 
 
 //if the first letter(s) is/are consonants
-  if(consonantRegex.test(wordArray[0])){
+  if(!vowelRegex.test(wordArray[0])){
     //console.log("it is a consonant");
     let howMany= 0;
     

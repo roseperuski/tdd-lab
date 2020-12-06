@@ -18,7 +18,7 @@ describe('convertToPigLatin', function() {
         expect(convertToPigLatin('cats')).toEqual('atscay');
     });
 
-   // If a word starts with two consonants move the two consonants to the end of the word and add "ay."
+   // If a word starts with two consonants more the two consonants to the end of the word and add "ay."
    it('should convert word starting w/2 consonants properly', function(){
     expect(convertToPigLatin('crate')).toEqual('atecray');
     });
@@ -32,8 +32,16 @@ describe('convertToPigLatin', function() {
 //     });
 
 //no case conversion
-it('should convert word to lowercase', function(){
-      expect(convertToPigLatin('Tired')).toEqual('iredTay');
-        });
+    it('should not convert word to lowercase', function(){
+        expect(convertToPigLatin('Tired')).toEqual('iredTay');});
+  //punctuation in string  
+    it('should allow punctuation in the input', function(){
+        expect(convertToPigLatin('cut-co$')).toEqual('ut-co$cay');});
+
+    it('should allow punctuation in the input', function(){
+        expect(convertToPigLatin('#toasty')).toEqual('oasty#tay');});
+    
+
 })
+
 
