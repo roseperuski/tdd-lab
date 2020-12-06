@@ -11,8 +11,12 @@ describe('convertToPigLatin', function() {
     });
    // If a word starts with two consonants move the two consonants to the end of the word and add "ay."
    it('should convert word starting w/2 consonants properly', function(){
-    expect(convertToPigLatin('pneumonia')).toEqual('eumoniapnay');
-});
+    expect(convertToPigLatin('crate')).toEqual('atecray');
+    });
+    
+    it('should convert word starting w/2 consonants properly', function(){
+        expect(convertToPigLatin('pneumonia')).toEqual('eumoniapnay');
+        });
 //user enters null
 
 //user enters number
