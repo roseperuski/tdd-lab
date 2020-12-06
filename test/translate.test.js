@@ -40,7 +40,15 @@ describe('convertToPigLatin', function() {
 
     it('should allow punctuation in the input', function(){
         expect(convertToPigLatin('#toasty')).toEqual('oasty#tay');});
+
+    // test a number in the string
+    it('should return the word if there is a number', function(){
+        expect(convertToPigLatin('189')).toEqual('189');
+    });
     
+    it('should return email addresses as an email addres', function(){
+        expect(convertToPigLatin('hello@grandcircus.com')).toEqual('hello@grandcircus.com')
+    });
 
 })
 

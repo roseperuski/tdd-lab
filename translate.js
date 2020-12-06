@@ -1,8 +1,14 @@
 function convertToPigLatin(word){
   //word=word.toLowerCase();
-  let vowelRegex = /[aeiou]/i; 
- let consonantRegex = /[bcdfghjklmnpqrstvwxyz]/i; 
- let punctRegex = /[.,\/#!$%\^&\*;:{}=\-_`~()]/g;
+  const vowelRegex = /[aeiou]/i; 
+ const consonantRegex = /[bcdfghjklmnpqrstvwxyz]/i; 
+ const punctRegex = /[.,\/#!$%\^&\*;:{}=\-_`~()]/g;
+ const numRegex = /[0-9]/g;
+
+ if(numRegex.test(word) || word.includes('@')){
+   return word;
+ }
+ 
 
   let wordArray=word.split('');
   //console.log(wordArray[0]);
