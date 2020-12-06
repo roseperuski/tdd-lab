@@ -2,7 +2,7 @@ function convertToPigLatin(word){
   //word=word.toLowerCase();
   let vowelRegex = /[aeiou]/i; 
  let consonantRegex = /[bcdfghjklmnpqrstvwxyz]/i; 
-  
+ let punctRegex = /[.,\/#!$%\^&\*;:{}=\-_`~()]/g;
 
   let wordArray=word.split('');
   //console.log(wordArray[0]);
@@ -24,7 +24,10 @@ function convertToPigLatin(word){
       
       if(consonantRegex.test(wordArray[index])){
         howMany++
-      } else {
+      } else if(punctRegex.test(wordArray[index])){
+        howMany++
+      }
+      else {
         break;
       }
 
