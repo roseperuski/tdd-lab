@@ -5,8 +5,9 @@ function convertToPigLatin(word){
   
 
   let wordArray=word.split('');
-  console.log(wordArray[0]);
+  //console.log(wordArray[0]);
 
+//if the first letter is a vowel
   if(vowelRegex.test(wordArray[0])){
    // console.log("it is a vowel");
     wordArray.push('way');
@@ -14,6 +15,7 @@ function convertToPigLatin(word){
     return wordArray = wordArray.join('');
   } 
 
+//if the first letter(s) is/are consonants
   if(consonantRegex.test(wordArray[0])){
     //console.log("it is a consonant");
     let howMany= 0;
@@ -29,18 +31,16 @@ function convertToPigLatin(word){
       
     }
     
-   
-
-    console.log(`num of consonants: ${howMany}`)
+    //console.log(`num of consonants: ${howMany}`)
 
     let converted = wordArray.splice(0,howMany);
     converted=converted.join('');
-    console.log(`converted is ${converted}`);
+    //console.log(`converted is ${converted}`);
     wordArray.push(`${converted}ay`);
-    console.log(`word array pushed  is ${wordArray}`);
+    //console.log(`word array pushed  is ${wordArray}`);
     wordArray = wordArray.join('');
 
-    console.log(`wordArray before returning is ${wordArray}`);
+    //console.log(`wordArray before returning is ${wordArray}`);
 
     return wordArray;
   }
