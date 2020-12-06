@@ -27,9 +27,13 @@ describe('convertToPigLatin', function() {
         expect(convertToPigLatin('qpneumonia')).toEqual('eumoniaqpnay');
         });
 // lowercase converstion
-it('should convert word to lowercase', function(){
-    expect(convertToPigLatin('Tired')).toEqual('iredtay');
-    });
+// it('should convert word to lowercase', function(){
+//     expect(convertToPigLatin('Tired')).toEqual('iredtay');
+//     });
 
+//no case conversion
+it('should convert word to lowercase', function(){
+      expect(convertToPigLatin('Tired')).toEqual('iredTay');
+        });
 })
 

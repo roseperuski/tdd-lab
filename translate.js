@@ -1,7 +1,7 @@
 function convertToPigLatin(word){
-  word=word.toLowerCase();
-  let vowelRegex = /[aeiou]/; 
- let consonantRegex = /[bcdfghjklmnpqrstvwxyz]/; 
+  //word=word.toLowerCase();
+  let vowelRegex = /[aeiou]/i; 
+ let consonantRegex = /[bcdfghjklmnpqrstvwxyz]/i; 
   
 
   let wordArray=word.split('');
