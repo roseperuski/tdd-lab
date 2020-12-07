@@ -27,7 +27,8 @@ let vowelRegex = /[aeiou]/;
         howMany++
       } else {
         break;
-      } 
+      }
+ 
     }
     
     //console.log(`num of consonants: ${howMany}`)
