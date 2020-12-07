@@ -26,12 +26,12 @@ describe('convertToPigLatin', function() {
     it('should convert word starting w/3 consonants properly', function(){
         expect(convertToPigLatin('qpneumonia')).toEqual('eumoniaqpnay');
         });
-// lowercase converstion
-// it('should convert word to lowercase', function(){
-//     expect(convertToPigLatin('Tired')).toEqual('iredtay');
-//     });
+    // lowercase converstion
+    // it('should convert word to lowercase', function(){
+    //     expect(convertToPigLatin('Tired')).toEqual('iredtay');
+    //     });
 
-//no case conversion
+    //no case conversion
     it('should not convert word to lowercase', function(){
         expect(convertToPigLatin('Tired')).toEqual('iredTay');});
   //punctuation in string  
@@ -39,17 +39,22 @@ describe('convertToPigLatin', function() {
         expect(convertToPigLatin('cut-co$')).toEqual('ut-co$cay');});
 
     it('should allow punctuation in the input', function(){
-        expect(convertToPigLatin('#toasty')).toEqual('oasty#tay');});
+    //     expect(convertToPigLatin('#toasty')).toEqual('oasty#tay');});
+
+    // //test a contraction
+    // it('should translate a contraction', function(){
+      //  expect(convertToPigLatin('can't')).toEqual('oasty#tay');}); 
 
     // test a number in the string
     it('should return the word if there is a number', function(){
         expect(convertToPigLatin('189')).toEqual('189');
     });
     
+    // test an email address returning unnchanged
     it('should return email addresses as an email addres', function(){
         expect(convertToPigLatin('hello@grandcircus.com')).toEqual('hello@grandcircus.com')
     });
 
+});
 })
-
 
