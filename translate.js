@@ -1,6 +1,7 @@
 function convertToPigLatin(word){
   word=word.toLowerCase();
-  let vowelRegex = /[aeiou]/; 
+
+let vowelRegex = /[aeiou]/; 
  let consonantRegex = /[bcdfghjklmnpqrstvwxyz]/; 
   
 
@@ -26,9 +27,7 @@ function convertToPigLatin(word){
         howMany++
       } else {
         break;
-      }
-
-      
+      } 
     }
     
     //console.log(`num of consonants: ${howMany}`)
